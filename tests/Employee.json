@@ -1,0 +1,17 @@
+[
+  {
+    "firstName": "Anandh",
+    "lastName": "Duraiarasan",
+    "skills": ["JavaScript", "Automation"]
+  },
+  {
+    "firstName": "Nithish",
+    "lastName": "Kumar",
+    "skills": []
+  },
+  {
+    "firstName": "Rahul",
+    "lastName": "Sharma",
+    "skills": ["Java", "Selenium"]
+  }
+]
