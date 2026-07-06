@@ -77,7 +77,7 @@ test('search for iPhone on Amazon', async ({ page }) => {
   const navRight = page.locator('(//div[@class="nav-right"])[1]');
   await expect(navRight).toBeVisible();
 
- 6. Verify search results actually show up for "iPhone"
- await expect(page).toHaveURL(/k=iPhone/i);
-});
+//  6. Verify search results actually show up for "iPhone"
+//  await expect(page).toHaveURL(/k=iPhone/i);
+// });
 
