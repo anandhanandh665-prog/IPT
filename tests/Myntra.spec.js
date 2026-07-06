@@ -347,3 +347,56 @@ test('Print employees having skills', async () => {
     }
 
 });
+
+
+
+
+const { test, expect } = require('@playwright/test');
+
+test('search for iPhone on Amazon', async ({ page }) => {
+  // 1. Go to Amazon
+  await page.goto('https://www.amazon.com');
+
+  // 2. Click on the search bar and type "iPhone"
+  const searchBar = page.locator('//div[@class="nav-search-field "]//input');
+  await searchBar.click();
+  await searchBar.fill('iPhone');
+
+  // 3. Click the search button
+  await page.locator('#nav-search-submit-button').click();
+
+  // 4. Wait for results page to load
+  await page.waitForLoadState('networkidle');
+
+  // 5. Verify the nav-right section is visible (sanity check from your locator)
+  const navRight = page.locator('(//div[@class="nav-right"])[1]');
+  await expect(navRight).toBeVisible();
+
+//  6. Verify search results actually show up for "iPhone"
+//  await expect(page).toHaveURL(/k=iPhone/i);
+// });
+
+const { test, expect } = require('@playwright/test');
+
+test('search for iPhone on Amazon', async ({ page }) => {
+  // 1. Go to Amazon
+  await page.goto('https://www.amazon.com');
+
+  // 2. Click on the search bar and type "iPhone"
+  const searchBar = page.locator('//div[@class="nav-search-field "]//input');
+  await searchBar.click();
+  await searchBar.fill('iPhone');
+
+  // 3. Click the search button
+  await page.locator('#nav-search-submit-button').click();
+
+  // 4. Wait for results page to load
+  await page.waitForLoadState('networkidle');
+
+  // 5. Verify the nav-right section is visible (sanity check from your locator)
+  const navRight = page.locator('(//div[@class="nav-right"])[1]');
+  await expect(navRight).toBeVisible();
+
+//  6. Verify search results actually show up for "iPhone"
+//  await expect(page).toHaveURL(/k=iPhone/i);
+// });
