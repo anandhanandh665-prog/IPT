@@ -81,3 +81,37 @@ test('search for iPhone on Amazon', async ({ page }) => {
 //  await expect(page).toHaveURL(/k=iPhone/i);
 // });
 
+  // 4. Wait for results page to load
+  await page.waitForLoadState('networkidle');
+
+  // 5. Verify the nav-right section is visible (sanity check from your locator)
+  const navRight = page.locator('(//div[@class="nav-right"])[1]');
+  await expect(navRight).toBeVisible();
+
+//  6. Verify search results actually show up for "iPhone"
+//  await expect(page).toHaveURL(/k=iPhone/i);
+// });
+
+  // 4. Wait for results page to load
+  await page.waitForLoadState('networkidle');
+
+  // 5. Verify the nav-right section is visible (sanity check from your locator)
+  const navRight = page.locator('(//div[@class="nav-right"])[1]');
+  await expect(navRight).toBeVisible();
+
+//  6. Verify search results actually show up for "iPhone"
+//  await expect(page).toHaveURL(/k=iPhone/i);
+// });
+
+  // 4. Wait for results page to load
+  await page.waitForLoadState('networkidle');
+
+  // 5. Verify the nav-right section is visible (sanity check from your locator)
+  const navRight = page.locator('(//div[@class="nav-right"])[1]');
+  await expect(navRight).toBeVisible();
+
+//  6. Verify search results actually show up for "iPhone"
+//  await expect(page).toHaveURL(/k=iPhone/i);
+// });
+
+
