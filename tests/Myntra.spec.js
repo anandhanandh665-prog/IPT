@@ -304,99 +304,99 @@
 // });
 
 // @ts-check
-//import { test, expect } from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
-// test('Flipkart Sign Up', async ({ page }) => {
+test('Flipkart Sign Up', async ({ page }) => {
 
-//   await page.goto('https://www.flipkart.com/');
+  await page.goto('https://www.flipkart.com/');
 
-//   // Close login popup
-//   await page.locator("//span[@role='button']").click();
+  // Close login popup
+  await page.locator("//span[@role='button']").click();
 
-//   // Hover on Login
-//   await page.locator("//a[@title='Login']").hover();
+  // Hover on Login
+  await page.locator("//a[@title='Login']").hover();
 
-//   // Click Sign Up
-//   await page.locator("//a[@title='Sign Up']/span[contains(text(),'Sign Up')]").click();
+  // Click Sign Up
+  await page.locator("//a[@title='Sign Up']/span[contains(text(),'Sign Up')]").click();
 
-//   // Wait for Sign Up page
-//   //await page.waitForURL("**/account/login?signup=true**");
+  // Wait for Sign Up page
+  //await page.waitForURL("**/account/login?signup=true**");
 
-//   // Enter Mobile Number
-//   await page.locator("//input[@type='text' and @maxlength='10']").fill("9442392745");
-//   // Click Continue
-//   await page.locator("//button[@type='submit']//span[contains(text(),'CONTINUE')]").click();
+  // Enter Mobile Number
+  await page.locator("//input[@type='text' and @maxlength='10']").fill("9442392745");
+  // Click Continue
+  await page.locator("//button[@type='submit']//span[contains(text(),'CONTINUE')]").click();
 
-//   await page.waitForTimeout(5000);
-
-// });
-
-import { test } from '@playwright/test';
-import employees from './employee.json';
-
-test('Print employees having skills', async () => {
-
-    for (const emp of employees) {
-
-        if (emp.skills.length > 0) {
-
-            console.log("Employee :", emp.firstName);
-            console.log("Skills   :", emp.skills.includes("java"));
-            console.log("--------------------");
-        }
-    }
+  await page.waitForTimeout(5000);
 
 });
 
+// import { test } from '@playwright/test';
+// import employees from './employee.json';
 
+// test('Print employees having skills', async () => {
 
+//     for (const emp of employees) {
 
-const { test, expect } = require('@playwright/test');
+//         if (emp.skills.length > 0) {
 
-test('search for iPhone on Amazon', async ({ page }) => {
-  // 1. Go to Amazon
-  await page.goto('https://www.amazon.com');
+//             console.log("Employee :", emp.firstName);
+//             console.log("Skills   :", emp.skills.includes("java"));
+//             console.log("--------------------");
+//         }
+//     }
 
-  // 2. Click on the search bar and type "iPhone"
-  const searchBar = page.locator('//div[@class="nav-search-field "]//input');
-  await searchBar.click();
-  await searchBar.fill('iPhone');
-
-  // 3. Click the search button
-  await page.locator('#nav-search-submit-button').click();
-
-  // 4. Wait for results page to load
-  await page.waitForLoadState('networkidle');
-
-  // 5. Verify the nav-right section is visible (sanity check from your locator)
-  const navRight = page.locator('(//div[@class="nav-right"])[1]');
-  await expect(navRight).toBeVisible();
-
-//  6. Verify search results actually show up for "iPhone"
-//  await expect(page).toHaveURL(/k=iPhone/i);
 // });
 
-const { test, expect } = require('@playwright/test');
 
-test('search for iPhone on Amazon', async ({ page }) => {
-  // 1. Go to Amazon
-  await page.goto('https://www.amazon.com');
 
-  // 2. Click on the search bar and type "iPhone"
-  const searchBar = page.locator('//div[@class="nav-search-field "]//input');
-  await searchBar.click();
-  await searchBar.fill('iPhone');
 
-  // 3. Click the search button
-  await page.locator('#nav-search-submit-button').click();
+// const { test, expect } = require('@playwright/test');
 
-  // 4. Wait for results page to load
-  await page.waitForLoadState('networkidle');
+// test('search for iPhone on Amazon', async ({ page }) => {
+//   // 1. Go to Amazon
+//   await page.goto('https://www.amazon.com');
 
-  // 5. Verify the nav-right section is visible (sanity check from your locator)
-  const navRight = page.locator('(//div[@class="nav-right"])[1]');
-  await expect(navRight).toBeVisible();
+//   // 2. Click on the search bar and type "iPhone"
+//   const searchBar = page.locator('//div[@class="nav-search-field "]//input');
+//   await searchBar.click();
+//   await searchBar.fill('iPhone');
 
-//  6. Verify search results actually show up for "iPhone"
-//  await expect(page).toHaveURL(/k=iPhone/i);
-// });
+//   // 3. Click the search button
+//   await page.locator('#nav-search-submit-button').click();
+
+//   // 4. Wait for results page to load
+//   await page.waitForLoadState('networkidle');
+
+//   // 5. Verify the nav-right section is visible (sanity check from your locator)
+//   const navRight = page.locator('(//div[@class="nav-right"])[1]');
+//   await expect(navRight).toBeVisible();
+
+// //  6. Verify search results actually show up for "iPhone"
+// //  await expect(page).toHaveURL(/k=iPhone/i);
+// // });
+
+// const { test, expect } = require('@playwright/test');
+
+// test('search for iPhone on Amazon', async ({ page }) => {
+//   // 1. Go to Amazon
+//   await page.goto('https://www.amazon.com');
+
+//   // 2. Click on the search bar and type "iPhone"
+//   const searchBar = page.locator('//div[@class="nav-search-field "]//input');
+//   await searchBar.click();
+//   await searchBar.fill('iPhone');
+
+//   // 3. Click the search button
+//   await page.locator('#nav-search-submit-button').click();
+
+//   // 4. Wait for results page to load
+//   await page.waitForLoadState('networkidle');
+
+//   // 5. Verify the nav-right section is visible (sanity check from your locator)
+//   const navRight = page.locator('(//div[@class="nav-right"])[1]');
+//   await expect(navRight).toBeVisible();
+
+// //  6. Verify search results actually show up for "iPhone"
+// //  await expect(page).toHaveURL(/k=iPhone/i);
+// // });
