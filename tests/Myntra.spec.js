@@ -306,7 +306,7 @@
 // @ts-check
 import { test, expect } from '@playwright/test';
 
-test('Flipkart Sign Up', async ({ page }) => {
+test.only('Flipkart Sign Up', async ({ page }) => {
 
   await page.goto('https://www.flipkart.com/');
 
